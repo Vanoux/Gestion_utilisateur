@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Gestion Utilisateur</title>
-  </head>
-  <body>
-  
+</head>
 
- 
-<script type="text/javascript" src="main.js"></script>
-  </body>
+<body>
+
+    <form action="" method="POST">
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="user_nom">
+        </div>
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="user_prenom">
+        </div>
+        <div>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="user_login">
+        </div>
+        <div>
+            <!-- button radio -->
+            <label for="femme">Femme</label>
+            <input type="radio" id="femme" name="user_sexe" value="femme">
+            <label for="homme">Homme</label>
+            <input type="radio" id="homme" name="user_sexe" value="homme">
+        </div>
+        <div>
+            <!-- au moins huit caractères dont au moins une majuscule, un caractère spécial et un chiffre -->
+            <label for="mdp">Mot de Passe</label>
+            <input type="password" id="mdp" name="user_mdp">
+        </div>
+        <div>
+            <label for="anniv">Date de Naissance</label>
+            <input type="text" id="anniv" name="user_anniv">
+        </div>
+        <div>
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="user_ville">
+        </div>
+        <div>
+            <!-- valide -->
+            <label for="mail">Email</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <!-- valide -->
+            <label for="url">Site web</label>
+            <input type="text" id="url" name="user_url">
+        </div>
+        <div>
+            <!-- Max 200 caractères -->
+            <label for="hobbies">Hobbies</label>
+            <textarea id="hobbies" name="user_hobbies" maxlength="200"></textarea>
+        </div>
+        <div>
+            <!-- format XX.XX.XX.XX.XX -->
+            <label for="tel">Téléphone</label>
+            <input type="text" id="tel" name="user_telephone">                        <!--value="XX.XX.XX.XX.XX"-->
+        </div>
+        <div>
+            <label for="couleur">Couleur préféré</label>
+            <input type="text" id="couleur" name="user_couleur">
+        </div>
+    </form>
+
+
+
+
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
