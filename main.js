@@ -7,3 +7,37 @@
     Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
 
 */
+/*var info = document.getElementById("nom")
+  
+function valeur() {
+    var nom = document.getElementsByName("user_nom").value;
+    var prenom = document.getElementsByName("user_prenom").value;
+
+};
+console.log("heyhey")
+*/
+
+
+
+
+function valide() {
+
+    var info = {
+        "nom": $("#nom").val(),
+        "prenom": $("#prenom").val(),
+        "login": $("#login").val(),
+        "sexe": $("#femme").val(),
+        "sexe": $("#homme").val(),
+        "mdp": $("#mdp").val(),
+        "anniv": $("#anniv").val(),
+        "ville": $("#ville").val(),
+        "email": $("#mail").val(),
+        "url": $("#url").val(),
+        "hobbies": $("#hobbies").val(),
+        "tel": $("#tel").val(),
+        "couleur": $("#couleur").val()
+    }
+    sessionStorage.setItem("data", JSON.stringify(info));
+    console.log("la tête à toto");
+
+};

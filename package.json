@@ -1,0 +1,22 @@
+{
+  "name": "gestion_utilisateur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanoux/Gestion_utilisateur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vanoux/Gestion_utilisateur/issues"
+  },
+  "homepage": "https://github.com/Vanoux/Gestion_utilisateur#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

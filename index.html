@@ -9,18 +9,18 @@
 
 <body>
 
-    <form action="" method="POST">
+    <form action="data.json" method="post" id="utilisateur">
         <div>
             <label for="nom">Nom</label>
-            <input type="text" id="nom" name="user_nom">
+            <input type="text" id="nom" name="user_nom" placeholder="Votre Nom">
         </div>
         <div>
             <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="user_prenom">
+            <input type="text" id="prenom" name="user_prenom" placeholder="Votre Prénom">
         </div>
         <div>
             <label for="login">Login</label>
-            <input type="text" id="login" name="user_login">
+            <input type="text" id="login" name="user_login" placeholder="Votre Pseudo">
         </div>
         <div>
             <!-- button radio -->
@@ -32,39 +32,45 @@
         <div>
             <!-- au moins huit caractères dont au moins une majuscule, un caractère spécial et un chiffre -->
             <label for="mdp">Mot de Passe</label>
-            <input type="password" id="mdp" name="user_mdp">
+            <input type="password" id="mdp" name="user_mdp" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="Votre Mot de passe">
         </div>
         <div>
             <label for="anniv">Date de Naissance</label>
-            <input type="text" id="anniv" name="user_anniv">
+            <input type="text" id="anniv" name="user_anniv" placeholder="Votre Date de naissance">
         </div>
         <div>
             <label for="ville">Ville</label>
-            <input type="text" id="ville" name="user_ville">
+            <input type="text" id="ville" name="user_ville" placeholder="Votre Ville">
         </div>
         <div>
-            <!-- valide -->
+            <!--valide-->
             <label for="mail">Email</label>
-            <input type="email" id="mail" name="user_mail">
+            <input type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Votre E-Mail" >
         </div>
         <div>
             <!-- valide -->
             <label for="url">Site web</label>
-            <input type="text" id="url" name="user_url">
+            <input type="url" id="url" name="user_url" value="http://" placeholder="Votre Site web">
         </div>
         <div>
             <!-- Max 200 caractères -->
             <label for="hobbies">Hobbies</label>
-            <textarea id="hobbies" name="user_hobbies" maxlength="200"></textarea>
+            <textarea id="hobbies" name="user_hobbies" maxlength="200" placeholder="Vos Hobbies"></textarea>
         </div>
         <div>
             <!-- format XX.XX.XX.XX.XX -->
             <label for="tel">Téléphone</label>
-            <input type="text" id="tel" name="user_telephone">                        <!--value="XX.XX.XX.XX.XX"-->
+            <input type="tel" id="tel" name="user_telephone" pattern="^(?:0|\[1-79](?:[\.\]?\d\d){4}$>" placeholder="Votre Téléphone">
+            <!--pattern=[0-9][.]{2}[0-9]{2}[.][0-9]{2}[.][0-9]{2}[.][0-9]{2} (marche pas)-->
         </div>
         <div>
             <label for="couleur">Couleur préféré</label>
-            <input type="text" id="couleur" name="user_couleur">
+            <input type="color" id="couleur" name="user_couleur">
+        </div>
+        <div>
+            <input type="submit" value="envoyer">
+            <!-- input ou button??? -->
+            <button onclick="ok()">OK</button>
         </div>
     </form>
 
@@ -73,6 +79,7 @@
 
 
     <script type="text/javascript" src="main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 </body>
 
 </html>
