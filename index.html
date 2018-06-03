@@ -9,7 +9,8 @@
 
 <body>
 
-    <form action="data.json" method="post" id="utilisateur">
+    <form action="recup.html" method="post" id="utilisateur">
+<!--  action => mettre l'url vers laquelle on souhaite envoyer les données -->
         <div>
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="user_nom" placeholder="Votre Nom">
@@ -70,13 +71,10 @@
         <div>
             <input type="submit" value="envoyer">
             <!-- input ou button??? -->
-            <button onclick="ok()">OK</button>
         </div>
     </form>
 
-
-
-
+    
 
     <script type="text/javascript" src="main.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>

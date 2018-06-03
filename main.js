@@ -7,19 +7,24 @@
     Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
 
 */
-/*var info = document.getElementById("nom")
-  
-function valeur() {
-    var nom = document.getElementsByName("user_nom").value;
-    var prenom = document.getElementsByName("user_prenom").value;
 
+
+var utilisateur = document.getElementById("utilisateur")
+console.log(utilisateur);
+
+function collect() {
+
+    var data = sessionStorage.setItem(utilisateur.value);
+    console.log(data);
 };
-console.log("heyhey")
-*/
+var recup = sessionStorage.getItem(utilisateur + data);
+console.log(recup);
+console.log(sessionStorage);
 
 
 
 
+/*
 function valide() {
 
     var info = {
@@ -41,3 +46,4 @@ function valide() {
     console.log("la tête à toto");
 
 };
+*/
