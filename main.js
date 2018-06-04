@@ -4,11 +4,45 @@
     Bonus : implémenter l'autocomplétion pour la ville.
     Bonus 2: pas besoin de soumettre le formulaire pour contrôler les champs.
     Stocker les données récupérées. Ce peut être l'occasion de jeter un oeil au localStorage introduit par HTML5.
-    Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
+    Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".*/
+    
 
-*/
+//var sexe;
 
+ function valide() {
+     if ($(":input")[3].checked) {
+         var sexe = "femme";
+     } else {
+         var sexe = "homme";
+     }
 
+    var info = {
+        "nom": $("#nom").val(),
+        "prenom": $("#prenom").val(),
+        "login": $("#login").val(),
+        "sexe": sexe,
+        "mdp": $("#mdp").val(),
+        "anniv": $("#anniv").val(),
+        "ville": $("#ville").val(),
+        "email": $("#mail").val(),
+        "url": $("#url").val(),
+        "hobbies": $("#hobbies").val(),
+        "tel": $("#tel").val(),
+        "couleur": $("#couleur").val()
+    }
+    sessionStorage.setItem("données", JSON.stringify(info));
+
+};
+var recup = JSON.parse(sessionStorage.getItem("données"));
+console.log(recup);
+
+$("#data").append(recup.nom + " " + recup.prenom + " ! Ca va la vie ?");   
+    
+    
+    
+    
+
+/*Ancien Code NON fonctionnel !!
 var utilisateur = document.getElementById("utilisateur")
 console.log(utilisateur);
 
@@ -19,31 +53,9 @@ function collect() {
 };
 var recup = sessionStorage.getItem(utilisateur + data);
 console.log(recup);
-console.log(sessionStorage);
+console.log(sessionStorage);*/
 
 
 
 
-/*
-function valide() {
 
-    var info = {
-        "nom": $("#nom").val(),
-        "prenom": $("#prenom").val(),
-        "login": $("#login").val(),
-        "sexe": $("#femme").val(),
-        "sexe": $("#homme").val(),
-        "mdp": $("#mdp").val(),
-        "anniv": $("#anniv").val(),
-        "ville": $("#ville").val(),
-        "email": $("#mail").val(),
-        "url": $("#url").val(),
-        "hobbies": $("#hobbies").val(),
-        "tel": $("#tel").val(),
-        "couleur": $("#couleur").val()
-    }
-    sessionStorage.setItem("data", JSON.stringify(info));
-    console.log("la tête à toto");
-
-};
-*/

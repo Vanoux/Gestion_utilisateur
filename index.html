@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Gestion Utilisateur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -69,7 +70,7 @@
             <input type="color" id="couleur" name="user_couleur">
         </div>
         <div>
-            <input type="submit" value="envoyer">
+            <input type="submit" onclick="valide()" value="envoyer">
             <!-- input ou button??? -->
         </div>
     </form>
@@ -77,7 +78,7 @@
     
 
     <script type="text/javascript" src="main.js"></script>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+   
 </body>
 
 </html>
